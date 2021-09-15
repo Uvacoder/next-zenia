@@ -1,0 +1,16 @@
+---
+import Default from "./default.astro"
+import Meta from "../components/meta.astro"
+
+const {content} = Astro.props
+---
+
+<Default>
+	<Meta title={content.title} description={content.description} slot="head"/>
+
+	<div slot="body">
+		<h1>{content.title}</h1>
+		<p><em>{content.description}</em></p>
+		<slot/>
+	</div>
+</Default>
