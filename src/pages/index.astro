@@ -4,10 +4,15 @@ import Meta from "../components/meta.astro"
 ---
 
 <Default>
-	<div slot="head">
-		<Meta title="Zen" description="A blog about frontend world and psychology"/>
-	</div>
+	<Meta slot="head" title="Zen" description="A blog about frontend world and psychology"/>
+	
 	<div slot="body">
 		<h1>Hello world...</h1>
 	</div>
 </Default>
+
+<style>
+	h1 {
+		text-align: center;
+	}
+</style>
